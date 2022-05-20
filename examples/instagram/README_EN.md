@@ -1,5 +1,7 @@
 # System Design Instagram
 
+![](./assets/logo.png)
+
 Let's design a photo-sharing service like Instagram, where users can upload photos to share them with other users.
 
 - Similar Services: Flickr, Picasa

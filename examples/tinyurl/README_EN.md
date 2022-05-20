@@ -1,5 +1,7 @@
 # System Design URL Shortening Service like TinyURL
 
+![](./assets/logo.png)
+
 Let's design a URL shortening service like TinyURL. This service will provide short aliases redirecting to long URLs.
 
 - Similar services: bit.ly, goo.gl, qlink.me, etc.

@@ -1,5 +1,7 @@
 # System Design Uber
 
+![](./assets/logo.jpeg)
+
 Let's design a ride-sharing service like Uber, which connects passengers who need a ride with drivers who have a car.
 
 - Similar Services: Lyft, Didi, Via, Sidecar, etc.

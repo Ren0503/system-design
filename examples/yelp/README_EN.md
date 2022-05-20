@@ -1,5 +1,7 @@
 # System Design Yelp
 
+![](./assets/logo.png)
+
 Let's design a Yelp like service, where users can search for nearby places like restaurants, theaters, or shopping malls, etc., and can also add/view reviews of places.
 
 - Similar Services: Proximity server.
