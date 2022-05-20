@@ -1,5 +1,7 @@
 # System Design: Web Crawler
 
+![](./assets/logo.jpg)
+
 Let's design a Web Crawler that will systematically browse and download the World Wide Web. Web crawlers are also known as web spiders, robots, worms, walkers, and bots.
 
 Difficulty Level: Hard
