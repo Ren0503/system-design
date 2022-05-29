@@ -14,7 +14,7 @@ Twitter is an online social networking service where users post and read short 1
 
 We will be designing a simpler version of Twitter with the following requirements:
 
-## Functional Requirements
+### Functional Requirements
 
 1. Users should be able to post new tweets.
 2. A user should be able to follow other users.
@@ -44,11 +44,11 @@ Let’s assume we have one billion total users with 200 million daily active use
 
 **How many favorites per day?** If, on average, each user favorites five tweets per day we will have:
 
-> 200M users * 5 favorites => 1B favorites
+> 200M users * 5 favorites = 1B favorites
 
 **How many total tweet-views will our system generate?** Let’s assume on average a user visits their timeline two times a day and visits five other people’s pages. On each page if a user sees 20 tweets, then our system will generate 28B/day total tweet-views:
 
-> 200M DAU * ((2 + 5) * 20 tweets) => 28B/day
+> 200M DAU * ((2 + 5) * 20 tweets) = 28B/day
 
 **Storage Estimates** Let’s say each tweet has 140 characters and we need two bytes to store a character without compression. Let’s assume we need 30 bytes to store metadata with each tweet (like ID, timestamp, user ID, etc.). Total storage we would need:
 
@@ -78,11 +78,11 @@ tweet(api_dev_key, tweet_data, tweet_location, user_location, media_ids)
 ```
 
 **Parameters**:
-api_dev_key (string): The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
-tweet_data (string): The text of the tweet, typically up to 140 characters.
-tweet_location (string): Optional location (longitude, latitude) this Tweet refers to.
-user_location (string): Optional location (longitude, latitude) of the user adding the tweet.
-media_ids (number[]): Optional list of media_ids to be associated with the Tweet. (all the media photo, video, etc. need to be uploaded separately).
+- `api_dev_key` (string): The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
+- `tweet_data` (string): The text of the tweet, typically up to 140 characters.
+- `tweet_location` (string): Optional location (longitude, latitude) this Tweet refers to.
+- `user_location` (string): Optional location (longitude, latitude) of the user adding the tweet.
+- `media_ids` (number[]): Optional list of media_ids to be associated with the Tweet. (all the media photo, video, etc. need to be uploaded separately).
 
 **Returns**: (string)
 A successful post will return the URL to access that tweet. Otherwise, an appropriate HTTP error is returned.
