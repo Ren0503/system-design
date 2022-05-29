@@ -14,7 +14,7 @@ Twitter is an online social networking service where users post and read short 1
 
 We will be designing a simpler version of Twitter with the following requirements:
 
-## Functional Requirements
+### Functional Requirements
 
 1. Users should be able to post new tweets.
 2. A user should be able to follow other users.
@@ -44,11 +44,11 @@ Let’s assume we have one billion total users with 200 million daily active use
 
 **How many favorites per day?** If, on average, each user favorites five tweets per day we will have:
 
-> 200M users * 5 favorites => 1B favorites
+> 200M users * 5 favorites = 1B favorites
 
 **How many total tweet-views will our system generate?** Let’s assume on average a user visits their timeline two times a day and visits five other people’s pages. On each page if a user sees 20 tweets, then our system will generate 28B/day total tweet-views:
 
-> 200M DAU * ((2 + 5) * 20 tweets) => 28B/day
+> 200M DAU * ((2 + 5) * 20 tweets) = 28B/day
 
 **Storage Estimates** Let’s say each tweet has 140 characters and we need two bytes to store a character without compression. Let’s assume we need 30 bytes to store metadata with each tweet (like ID, timestamp, user ID, etc.). Total storage we would need:
 
@@ -78,11 +78,11 @@ tweet(api_dev_key, tweet_data, tweet_location, user_location, media_ids)
 ```
 
 **Parameters**:
-api_dev_key (string): The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
-tweet_data (string): The text of the tweet, typically up to 140 characters.
-tweet_location (string): Optional location (longitude, latitude) this Tweet refers to.
-user_location (string): Optional location (longitude, latitude) of the user adding the tweet.
-media_ids (number[]): Optional list of media_ids to be associated with the Tweet. (all the media photo, video, etc. need to be uploaded separately).
+- `api_dev_key` (string): The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
+- `tweet_data` (string): The text of the tweet, typically up to 140 characters.
+- `tweet_location` (string): Optional location (longitude, latitude) this Tweet refers to.
+- `user_location` (string): Optional location (longitude, latitude) of the user adding the tweet.
+- `media_ids` (number[]): Optional list of media_ids to be associated with the Tweet. (all the media photo, video, etc. need to be uploaded separately).
 
 **Returns**: (string)
 A successful post will return the URL to access that tweet. Otherwise, an appropriate HTTP error is returned.
@@ -180,7 +180,12 @@ Since our system is read-heavy, we can have multiple secondary database servers 
 
 ## 11. Load Balancing
 
-We can add Load balancing layer at three places in our system 1) Between Clients and Application servers 2) Between Application servers and database replication servers and 3) Between Aggregation servers and Cache server. Initially, a simple Round Robin approach can be adopted; that distributes incoming requests equally among servers. This LB is simple to implement and does not introduce any overhead. Another benefit of this approach is that if a server is dead, LB will take it out of the rotation and will stop sending any traffic to it. A problem with Round Robin LB is that it won’t take servers load into consideration. If a server is overloaded or slow, the LB will not stop sending new requests to that server. To handle this, a more intelligent LB solution can be placed that periodically queries backend server about their load and adjusts traffic based on that.
+We can add Load balancing layer at three places in our system 
+1. Between Clients and Application servers 
+2. Between Application servers and database replication servers and
+3. Between Aggregation servers and Cache server. 
+
+Initially, a simple Round Robin approach can be adopted; that distributes incoming requests equally among servers. This LB is simple to implement and does not introduce any overhead. Another benefit of this approach is that if a server is dead, LB will take it out of the rotation and will stop sending any traffic to it. A problem with Round Robin LB is that it won’t take servers load into consideration. If a server is overloaded or slow, the LB will not stop sending new requests to that server. To handle this, a more intelligent LB solution can be placed that periodically queries backend server about their load and adjusts traffic based on that.
 
 ## 12. Monitoring
 
