@@ -2,6 +2,22 @@
 
 ## [Concepts](./concepts)
 
+- [availibity]
+- [caching]
+- [cap theorem]
+- [databases]
+  + [sql vs nosql]
+  + [data partition]
+  + [key-value database]
+- [distributed system]
+  + [workflow]
+  + [lead election]
+- [latency]
+- [load balancers]
+  + [type of load balancing algorithms]
+- [network protocols]
+- [others]
+
 ## [Examples](./examples)
 - [dropbox](./examples/dropbox/README_EN)
 - [facebook](./examples/facebook/README_EN)
