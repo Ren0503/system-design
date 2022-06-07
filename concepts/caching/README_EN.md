@@ -80,3 +80,31 @@ The cache is usually broken up using a consistent hashing algorithm, and each of
 of data, it can easily use the hashing function to locate information from the distributed cache to decide if the data is available.
 
 ### Content Distribution Network (CDN)
+
+![](./assets/cdn.png)
+
+When our pages serve huge amounts of static media, this is the best option. Suppose that the framework we are developing is not yet big enough to have a CDN of its own! “Using a lightweight HTTP server like apache, we can serve static media from a different subdomain such as “blog.enjoyalgorithms.com” and cut the DNS from your servers to a CDN layer.
+
+### Client-Side Caches
+
+Client-side caching duplicates the data of previously requested files directly within browser applications or other clients (such as intermediate network caches).
+
+### ISP layer cache
+
+ISP caching works in much the same way as browser caching. Once you have visited a website, your ISP may cache those pages so that they appear to load faster the next time you visit them. The main problem with this is that, unlike your browser cache, you can not delete these temporary files; instead, you have to wait until your ISP's cache expires and requests fresh copies of the files.
+
+## What is cache invalidation?
+
+Cache invalidation refers to when web cache proxies declare cached content as invalid, meaning it will no longer be served as the most recent piece of content when requested. The ultimate purpose, of course, is to ensure that the next time a client requests the affected content, the client receives the newest version at all times. There are primarily three kinds of systems for caching:
+1. Write through cache: The writes go through the cache, and only if writes to DB and the cache both succeed, write verified as a success. Between cache and storage, we will have full data consistency. Nothing can get lost in case of a crash, power failure, or other system disturbances. In this case, however, writing latency would be higher since two different systems are written.
+2. Write around cache: The write directly goes to the DB, bypassing the cache. Cache misses are increased because, in a cache error, the cache device reads the information from the Database. Consequently, in applications that quickly write and re-read the data, this can lead to higher reading latency. Reading must take place through slower back-end storage and higher latency.
+3. Write back cache: The write is rendered directly to the cache layer, and as soon as the write to the cache is finished, the write is verified. The cache then synchronizes this writing to the DB asynchronously. For write-intensive applications, this will result in rapid write latency and high write throughput. However, if the caching layer dies, there is a chance of losing the data since the cache is the only single copy of the written data. By having more than one replica that recognizes the writing in the cache, we can maximize this.
+
+## Advantages of Caching
+
+![](./assets/advantages.png)
+
+- **Improve Application Performance** : Caching can be used to improve system performance and API latency.
+- **Reduce Database Cost** : Caching can take up additional traffic to its cache server and reduce database traffic, eventually reducing database cost.
+- **Reduce the Load on the Backend**: Offloading the same request traffic from the main server to caching server would reduce the backend load.
+- **Increase Read Throughput (IOPS)**: Caching server responds much faster than the main server for the cached key, which increases read throughput
