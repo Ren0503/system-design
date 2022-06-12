@@ -33,7 +33,7 @@ Let’s implement a simple caching system:
 First, we will create a simple server and a database. We will use the database to get the HTML page and the server to host the page locally. We will create two end-points, one that uses the cache and the other that does not.
 
 ```js
-const express = require('express);
+const express = require('express');
 
 const app = express();
 
