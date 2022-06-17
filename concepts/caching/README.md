@@ -34,7 +34,11 @@ Triển khai hệ thống đơn giản:
 
 
 ```js
+<<<<<<< HEAD
+const express = require('express);
+=======
 const express = require('express');
+>>>>>>> master
 
 const app = express();
 
@@ -83,9 +87,12 @@ app.get('/withcache/index.html', (req, res) => {
     });
 });
 ```
+<<<<<<< HEAD
+=======
 
 Nếu ta xem trên trình duyệt với đường dẫn là `no-cache`, nó sẽ mất 3s để tải (vì ta sử dụng setTimeout để tải trang khi không có bộ đệm là 3s). Nếu bạn tải trang này lại lần nữa, nó vẫn sẽ mất 3s để tải trang vì với mỗi lần ta tải lại, nó phải đến cơ sở dữ liệu để tìm nạp. Bây giờ, ta chuyển sang đường dẫn `cache`, ở lần đầu tiên truy cập nó cũng sẽ mất 3s để tải trang vì lúc này bộ đệm đang trống và phải đến cơ sở dữ liệu để nạp dữ liệu. Nhưng, ở những lần sau trang sẽ được tải lại ngay lập tức. Ngay khi trang được tải lần đầu, ta đã lưu kết quả vào bộ đệm cho các lần truy cập trong tương lai.
 
 ### Chính sách xoá bộ đệm
 
 Ta cần xoá bỏ những mục tồn tại khi bộ đệm quá đầy để có không gian cho các phần tử mới thêm vào. Thực tế, có rất nhiều phương thức phổ biến để xoá các đối tượng ít được sử dụng. Các giải pháp để tối ưu hoá xác suất 
+>>>>>>> master

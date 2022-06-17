@@ -33,8 +33,7 @@ Now, you must have got the gist of the idea, but do you know where the latency c
 
 ## How to measure Latency?
 
-There are many methods used to quantify latency. We can measure it in different ways;
-the three most common methods are:
+There are many methods used to quantify latency. We can measure it in different ways; the three most common methods are:
 - **Ping**: Ping is the most common utility used to measure latency. It sends packets to an address and sees how fast the response is coming. Ping measures how long it takes for the data to travel from source to destination and back to the source. A faster ping corresponds to a more responsive connection.
 - **Traceroute**: Traceroute is another utility used to test latency. It also uses packets to calculate the time taken for each hop when routed to the destination.
 - **MTR**: MTR is a combination of both ping and Traceroute. MTR gives a report that lists how each hop in a network is required for a packet to travel from one end to the other. The report generally includes various details such as percentage Loss, Average Latency, etc.
@@ -52,7 +51,7 @@ As a developer, latency can also be optimized by making smarter choices regardin
     - Inefficient algorithms are the most apparent sources of latency in code. It is necessary to avoid unnecessary loops or nested expensive operations.
     - Use design patterns that avoid locking as multithreaded locks introduce latency.
     - Use an asynchronous programming model to utilize better hardware resources as blocking operations cause long wait times.
-    - Limiting the unbounded queue depths and providing back pressure typically lead to less wait time in the code resulting in more predictable latencies.
+    - Unbounded queues may sound counterintuitive, but these lead to unbounded hardware resource usage, which no computer has. Limiting the queue depths and providing back pressure typically lead to less wait time in your code resulting in more predictable latencies.
 
 ## Conclusion
 
