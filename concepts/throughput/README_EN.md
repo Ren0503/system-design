@@ -8,8 +8,7 @@ Throughput is defined as the total number of items processed per unit of time, o
 
 ## Misconceptions with Latency
 
-Latency is defined as the time interval between making a request and beginning to see a result. It is measured in the unit of time. Latency is always misunderstood with Throughput, and it is taken for granted that **High throughput systems should have low latency**. However, this may not always be true. Consider the data processing in association with disks, which tend to have large Throughput but fail to provide low
-latency.
+Latency is defined as the time interval between making a request and beginning to see a result. It is measured in the unit of time. Latency is always misunderstood with Throughput, and it is taken for granted that **High throughput systems should have low latency**. However, this may not always be true. Consider the data processing in association with disks, which tend to have large Throughput but fail to provide low latency.
 
 Similarly, in networked connections, the latency increases with Throughput. With the increase in Throughput, more and more packets will be there on a wire and contribute to increased latency. It is also possible to have systems with **Low Throughput and Low Latency also**. Hence the combination of Latency and Throughput is best chosen by considering the system and business requirements.
 
