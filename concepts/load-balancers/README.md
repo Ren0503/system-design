@@ -1,5 +1,7 @@
 # Cân bằng tải
 
+[Version English](./README_EN.md)
+
 ![](./assets/load-balancers.svg)
 
 Cân bằng tải là yếu tố cần thiết để xây dựng các ứng dụng hiệu suất cao và dễ dàng mở rộng trong thiết kế hệ thống. Nó cũng là một câu hỏi phổ biến cho các cuộc phỏng vấn công nghệ về thiết kế hệ thống.
