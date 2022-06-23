@@ -1,5 +1,9 @@
 # Định lý CAP: Khái niệm Thiết kế Hệ thống
 
+[Version English](./README_EN.md)
+
+![](./assets/cap-theorem-in-rdbms.svg)
+
 Định lý CAP là một trong những khái niệm quan trọng được sử dụng trong hệ thống phân tán. Trong bài viết này, chúng ta sẽ đề cập đến các khái niệm cơ bản liên quan đến định lý CAP và khả năng áp dụng của nó cho các hệ thống khác nhau.
 
 ## Định lý CAP là gì?

@@ -1,5 +1,9 @@
 # Proxy trong Thiết kế Hệ thống là gì?
 
+[Version English](./README_EN.md)
+
+![](./assets/proxies.svg)
+
 Trong bài viết này, chúng ta sẽ tìm hiểu về Proxy, một khái niệm phổ biến cho một cuộc phỏng vấn thiết kế hệ thống. Nhiều người trong chúng ta đã sử dụng các công cụ giúp chúng ta duy trì sự riêng tư hoặc ẩn danh của mình hoặc giữ an toàn trước những người dùng bên thứ ba nghe trộm trong kết nối của chúng ta. Bạn có biết nó hoạt động như thế nào và nó hữu ích như thế nào không? Hãy cùng tìm hiểu!
 
 ## Proxy là gì?
