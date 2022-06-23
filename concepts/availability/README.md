@@ -1,5 +1,7 @@
 # Tính Khả Dụng
 
+[Version English](./README_EN.md)
+
 <div align="center">
 <img src="./assets/availability-system-design-concept-cover.svg">
 </div>

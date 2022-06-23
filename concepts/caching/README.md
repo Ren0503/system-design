@@ -1,5 +1,7 @@
 # Khái Niệm Trong Thiết Kế Hệ Thống :  Caching
 
+[Version English](./README_EN.md)
+
 ![](./assets/caching-system-design-interview-concept-cover.svg)
 
 Trong bài viết này, ta sẽ tìm hiểu về kỹ thuật Caching, một khái niệm cốt lõi rất quan trọng trong thiết kế hệ thống. Bạn có thể nhớ lại mỗi khi mở một trang web nào đó, lần đầu tiên sẽ rất lâu nhưng những lần sau đó sẽ ít tốn thời gian hơn để tải. Tại sao lại như vậy? Hãy cùng tìm hiểu!

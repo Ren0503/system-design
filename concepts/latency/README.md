@@ -1,5 +1,9 @@
 # Độ trễ của Hệ thống là gì?
 
+[Version English](./README_EN.md)
+
+![](./assets/latency.svg)
+
 Khi quan sát dòng nước chảy ra từ một đường ống nào đó, ta có thể thấy tốc độ của nước ra khỏi đường ống không đồng nhất, đôi khi nước chảy ra rất nhanh và đôi khi là quá chậm. Khái niệm nó có phần tương đồng với một khái niệm trong hệ thống máy tính là độ trễ.
 
 Trong ví dụ trên độ trễ xác định tốc độ nước trong đường ống có thể được chuyển từ đường ống này sang đường ống khác. Còn với thuật ngữ máy tính, nó xác định tốc độ truyền dữ liệu từ server đến client và ngược lại. Đây là thước đo trực tiếp cho hiệu suất hệ thống, tức là độ trễ càng thấp hiệu suất càng cao.

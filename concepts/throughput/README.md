@@ -1,5 +1,9 @@
 # Thông lượng: Khái niệm Thiết kế Hệ thống
 
+[Version English](./README_EN.md)
+
+![](./assets/throughput.svg)
+
 Chắc hẳn bạn đã thấy nước chảy ra từ đường ống như thế nào rồi đúng không! Lưu lượng của nước có thể khác nhau, nghĩa là đôi khi lưu lượng có thể ít hơn và đôi khi lưu lượng lớn, nhưng có một giới hạn trên đối với lưu lượng tối đa có thể đi ra từ một đường ống và đó là công suất của nó. Thông lượng là một khái niệm cơ bản trong Khoa học Máy tính và mạng truyền thông, tương tự như lưu lượng nước trong đường ống. Trong bài viết này, chúng ta sẽ nói về thông lượng và tầm quan trọng của nó trong việc thiết kế bất kỳ hệ thống máy tính nào.
 
 ## Ý nghĩa thông lượng trong Thiết kế Hệ thống
