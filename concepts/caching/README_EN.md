@@ -109,8 +109,7 @@ In Global Caches, the same single cache space is used for all the nodes. Each of
 
 ### Distributed cache
 
-The cache is usually broken up using a consistent hashing algorithm, and each of its nodes owns part of the cached data. If a requesting node is searching for a certain piece
-of data, it can easily use the hashing function to locate information from the distributed cache to decide if the data is available.
+The cache is usually broken up using a consistent hashing algorithm, and each of its nodes owns part of the cached data. If a requesting node is searching for a certain piece of data, it can easily use the hashing function to locate information from the distributed cache to decide if the data is available.
 
 ### Content Distribution Network (CDN)
 
