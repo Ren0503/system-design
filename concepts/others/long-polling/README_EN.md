@@ -26,7 +26,7 @@ Apart from these considerations, there isn’t much else a client needs to accom
 
 ## Considerations when using long-polling
 
-As long polling is just an improvisation applied to an underlying request-response mechanism, it comes with an additional degree of complexity in its implementation. As a result, there are various concerns you’ll need to account for when using HTTP longpolling to build real-time interactivity in your application, both developing and scaling.
+As long polling is just an improvisation applied to an underlying request-response mechanism, it comes with an additional degree of complexity in its implementation. As a result, there are various concerns you’ll need to account for when using HTTP long polling to build real-time interactivity in your application, both developing and scaling.
 - As usage grows, how will you orchestrate your real-time backend?
 - Does long polling automatically re-establish connections when mobile devices rapidly switch between WiFi and cellular networks or lose connections and the IP address changes?
 - With long polling, can you manage the message queue and catch up on missed messages?
