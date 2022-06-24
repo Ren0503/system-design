@@ -1,4 +1,6 @@
-# Caching
+# Khái Niệm Trong Thiết Kế Hệ Thống :  Caching
+
+[Version English](./README_EN.md)
 
 ![](./assets/caching-system-design-interview-concept-cover.svg)
 
@@ -34,11 +36,7 @@ Triển khai hệ thống đơn giản:
 
 
 ```js
-<<<<<<< HEAD
-const express = require('express);
-=======
 const express = require('express');
->>>>>>> master
 
 const app = express();
 
@@ -87,12 +85,47 @@ app.get('/withcache/index.html', (req, res) => {
     });
 });
 ```
-<<<<<<< HEAD
-=======
 
 Nếu ta xem trên trình duyệt với đường dẫn là `no-cache`, nó sẽ mất 3s để tải (vì ta sử dụng setTimeout để tải trang khi không có bộ đệm là 3s). Nếu bạn tải trang này lại lần nữa, nó vẫn sẽ mất 3s để tải trang vì với mỗi lần ta tải lại, nó phải đến cơ sở dữ liệu để tìm nạp. Bây giờ, ta chuyển sang đường dẫn `cache`, ở lần đầu tiên truy cập nó cũng sẽ mất 3s để tải trang vì lúc này bộ đệm đang trống và phải đến cơ sở dữ liệu để nạp dữ liệu. Nhưng, ở những lần sau trang sẽ được tải lại ngay lập tức. Ngay khi trang được tải lần đầu, ta đã lưu kết quả vào bộ đệm cho các lần truy cập trong tương lai.
 
 ### Chính sách xoá bộ đệm
 
-Ta cần xoá bỏ những mục tồn tại khi bộ đệm quá đầy để có không gian cho các phần tử mới thêm vào. Thực tế, có rất nhiều phương thức phổ biến để xoá các đối tượng ít được sử dụng. Các giải pháp để tối ưu hoá xác suất 
->>>>>>> master
+Vì dung lượng bộ đệm là có hạn, nên để phục vụ cho lượng yêu cầu tài nguyên thường xuyên và nhiều, ta cần có những chính sách hợp lý để xoá bỏ các dữ liệu. Có nhiều phương thức để thực hiện điều này, ta có thể kể qua vài cái tên phổ biến như:
+
+**Random Replacement (RR)**: Như tên gọi, ta sẽ xoá các mục trong bộ đệm một cách ngẫu nhiên.
+
+**Least frequently used (LFU)**: Ta sẽ đếm số lần sử dụng của các mục trong bộ đệm và xoá đi các mục ít được sử dụng.
+
+**Least Recently Used (LRU)**: Ta sẽ xoá đi các mục không được sử dụng trong thời gian lâu nhất, tức là được sử dụng ít nhất gần đây.
+
+**First In First Out (FIFO)**: Thuật toán này tạo ra một đối tượng hàng đợi theo trật tự dữ liệu được tải vào bộ đệm. Nó xoá các đối tượng ở đầu khi bộ đệm đầy và thêm các đối tượng mới vào cuối hàng đợi. 
+
+## Các kiểu bộ đệm khác nhau
+
+### Application server cache
+
+Ta có thể đặt bộ đệm trực tiếp ở tầng Application. Bất cứ khi nào một yêu cầu đến hệ thống, nó sẽ trả về local, dữ liệu được lưu ở bộ đệm sẽ được lấy nhanh nhất nếu có. Còn không, nó sẽ truy vấn đến cơ sở dữ liệu.
+
+### Global Caches
+
+Trong global cache, không gian bộ đệm là dùng chung cho tất cả các máy. Mỗi truy vấn từ một máy 
+
+### Distributed cache
+
+Bộ đệm thường được chia nhỏ bằng cách sử dụng các thuật toán băm nhất quán, và mỗi node của nó sở hữu một phần của dữ liệu được lưu vào bộ đệm. Nếu một nút yêu cầu đang ìm kiếm một phần của dữ liệu, nó có thể dễ dàng sử dụng hàm băm để xác định vị trí từ bộ đệm phân tán để quyết điện nếu dữ liệu khả dụng.
+
+### Content Distribution Network (CDN)
+
+![](./assets/cdn.png)
+
+Khi trang web của chúng ta phải phục vụ một lượng lớn tài nguyên tĩnh, thì CDN sẽ là một lựa chọn tốt hơn. Giả sử famework mà ta đang phát triển không đủ lớn để có một CDN cho riêng nó. Thì việc sử dụng một HTTP server như apache sẽ giúp ta phục vụ các tài nguyên tĩnh từ một tên miền phụ và cắt DNS khỏi server của ta cho một tầng CDN.
+
+### Client-Side Caches
+
+
+
+## Lợi ích của bộ đệm
+
+- **Cải thiện hiệu suất ứng dụng:** Bộ nhớ đệm được sử dụng để cải thiện hiệu suất hệ thống và độ trễ API.
+- **Giảm chi phí cơ sở dữ liệu:** Bộ đệm có thể xử lý một phần lưu lương truy đến hệ thống, và giảm lưu lượng đến cơ sở dữ liệu, đồng nghĩa với giảm chi phí cơ sở dữ liệu.
+- **Giảm tải cho backend:** 
