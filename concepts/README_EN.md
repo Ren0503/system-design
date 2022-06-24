@@ -18,7 +18,7 @@ Overall, system design is an open-ended discussion topic. That's why most top te
 
 ![](./assets/concepts.jpeg)
 
-## [Availability](./availability/)
+## [Availability](./availability/README_EN.md)
 
 **Availability** is one way of ensuring the reliability of the system. It means the system should always remain up and return the response when any client fetches it for any operation. Whenever any user seeks the service, it remains available, and it must satisfy the user query.
 
@@ -28,21 +28,21 @@ Availability can be quantified by measuring the percentage of time the system’
 
 Availability of the service is generally increased by redundancy. Replication is used to offer redundancy by deploying a copy of the same server so that if one server goes down, it won’t affect the availability of the service.
 
-## [Throughput](./throughput/)
+## [Throughput](./throughput/README_EN.md)
 
 **Throughput** is the maximum rate of transfer or capacity of the system. It is used as a metric to determine how much work the system can do in a given time frame. The throughput of the system can be increased by scaling the system. One more promising way to increase the Throughput of the System is by splitting up the requests and distributing them to various resources.
 
-## [Proxies](./proxies/)
+## [Proxies](./proxies/README_EN.md)
 
 **Proxy** is a middle-man that sits between the client and server. When a client sends a request, it passes through the proxy and then reaches the server. Proxies are of two types: Forward Proxy and Reverse Proxy.
 
 The forward proxy acts as a mask for clients and hides the client’s identity from the server, e.g., VPN. Similarly, Reverse Proxy acts as a mask for servers and hides the server’s identity from the response comes, e.g., Load Balancer
 
-## [Latency](./latency/)
+## [Latency](./latency/README_EN.md)
 
 **Latency** is a measure of the time duration to produce the result. Latency is the time to spend or lags in generating the desired output. Latency is the measure of the speed of the system. Lower the Latency, the higher the speed of the system.
 
-## [Network & Protocols](./network-protocols/)
+## [Network & Protocols](./network-protocols/README_EN.md)
 
 Almost every system has an extreme dependency on the networks. **Networks** act as a platform for communications between user and server or among different servers. In contrast, **Protocols** are the set of rules that governs how the servers or machines communicate over the network. Some of the most common network Protocols are HTTP, TCP/IP, etc.
 
@@ -81,7 +81,7 @@ BASE compliancy maintains the integrity of No-SQL databases and ensures the prop
 - **Soft state** gives flexibility to the system and allows the system to change over time to ensure faster access.
 - **Eventual Consistency** ensures that the system takes some time to reach a consistent state and eventually become consistent.
 
-## [SQL vs NoSQL](./sql-vs-nosql/)
+## [SQL vs NoSQL](./databases/sql-nosql/README_EN.md)
 
 While designing any application, one needs to be clear about the type of storage according to the system requirements. If the system is distributed in nature and speed, the system’s scalability is essential, then No-SQL databases are the best choice to go with. No-SQL databases are also preferred when the amount of data is huge.
 
@@ -95,28 +95,28 @@ Whenever your services grow, and more and more requests come to the system, then
 
 Horizontal Scaling means scaling the service by adding more servers to your applications to distribute the requests. Similarly, Vertical Scaling corresponds to increasing the same machine’s power or capacity by upgrading it to handle more and more traffic.
 
-## [Caching](./caching/)
+## [Caching](./caching/README_EN.md)
 
 Caching ensures the performance of the system and helps in reducing the Latency of the System. To make our application faster, it is convenient to store some of the frequently used data to be accessed in a lesser time to ensure the system’s speed. A cache is used to store these certain data pieces, so instead of querying the database, the data can be easily fetched from the cache. However, with the addition of cache, the system's complexity increases. It is of utmost necessity to maintain synchronization between the data stored in the disk and the cache so that the system should remain consistent.
 
 Moreover, cache memory is too expensive; then, one can’t have a cache beyond a specific limit. Hence various data eviction algorithms like LIFO, FIFO, LRU, LFU, etc., are used to ensure the service’s performance.
 
-## [Distributed System](./distributed-system/)
+## [Distributed System](./distributed-system/README_EN.md)
 
 A distributed system collects many independent machines that work together by coordinating with each other to achieve a common goal. Distributed Systems work in such a manner that it appears as a single entity to the outside user. Distributed systems operate concurrently and are highly scalable. Nowadays Distributed System is a necessity and almost every application relied on distributed computing. Distributed Systems are highly scalable, reliable, and offer low latency services.
 
-## [Consistent-Hashing](./consistent-hashing/)
+## [Consistent-Hashing](./consistent-hashing/README_EN.md)
 
 Consistent Hashing is the most widely used concept in a distributed system as it offers considerable flexibility in the Scaling of the application. Consistent hashing is an improvement over normal Hashing. The traditional hashing method is ineffective in handling requests over a network. Here, inconsistent hashing, the user and servers are located virtually in a circular ring structure called the Hash ring. The ring is considered infinite and can accommodate any number of servers irrespective of no fixed allocation and assign them random locations based on some hash function. This concept allows the distribution of requests or data in the servers and their mapping to servers efficiently. It helps in achieving Horizontal Scaling and increases the throughput and Latency of the application.
 
-## [CAP Theorem](./cap-theorem/)
+## [CAP Theorem](./cap-theorem/README_EN.md)
 
 CAP Theorem is one of the essential concepts necessary for designing networked shared data systems. CAP Theorem is an essential concept that helps make trade-offs between the three available functionalities, based on the unique use case that we need for our system:
 - **Consistency**: Consistency means that everything should go on in a very wellcoordinated manner and with proper synchronization. Consistency ensures that the system should remain consistent and return the results such that any read operation should give the most frequent write operation.
 - **Availability**: Availability means that the system is always there and ready whenever any request is made to it. Whenever any client requests the server for the result, the system should remain available and give the response irrespective of the failure of one or more nodes. Replication is used to ensure redundancy, which directs contributes to the availability of the system.
 - **Partition Tolerance**: Partition Tolerance is necessary for any distributed system; we always need to choose between availability and Consistency. Partition Tolerance corresponds to the condition that the system should work irrespective of any harm or breakdown of nodes. Due to massive dependency on-network calls, it is prevalent for a distributed system to fall into the trap of network failures; hence partition tolerance is essential. So, in that case, we have to choose judiciously between Consistency or availability as per our requirement.
 
-## [Load Balancer](./load-balancers/)
+## [Load Balancer](./load-balancers/README_EN.md)
 
 Load Balancers are machines that balance the load among various servers. With Scaling, more and more servers are added to the system, and hence there must be a way to direct the requests to these servers in such a manner, so there is no heavy load on one server to prevent it from failure. Hence to deal with this, Load Balancers are used.
 - Load Balancers distribute the traffic, prevent the service from breakdown, and contribute to maintaining the service’s reliability.
