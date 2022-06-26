@@ -1,3 +1,0 @@
-# Băm Nhất Quán : Khái Niệm Thiết Kế Hệ Thống
-
-Bài viết này thảo luận về các khái niệm và cách tiếp cận chính có ích khi mở rộng hệ thống lưu trữ phân tán. Phép băm nhất quán có lợi và thường xuyên được áp dụng để giải quyết các thách thức khác nhau liên quan đến hệ thống và hữu ích trong các Cuộc phỏng vấn thiết kế hệ thống. Nó cũng hữu ích để giảm bớt sự tắc nghẽn trong khi thiết kế bất kỳ hệ thống back-end nào và mở rộng quy mô ứng dụng.
